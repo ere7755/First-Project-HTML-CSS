@@ -12,8 +12,8 @@
 
 </head>
 
-<body>
-    <nav>
+<body id="body" onscroll="window.scrollY > 500 ? nav.style.top = '-100%' : nav.style.top = '0' ">
+    <nav id="nav">
         <a href="index.html">
             <h3>R.Estevez</h3>
         </a>
@@ -27,56 +27,64 @@
             <a href="" class="aOne"><i class="fa-solid fa-circle-user"></i> Log In </a>
             <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
+        <i onclick="mobileNav.classList.toggle('show')" class="fa-solid fa-bars"></i>
 
 
     </nav>
+    <ul class="mobileNav" id="mobileNav">
+        <li><a href="index.html" class="aOne">Home</a></li>
+        <li><a href="about.html" class="aOne">About</a></li>
+        <li><a href="shop.html" class="aOne">Shop All</a></li>
+
+    </ul>
+
     <div class="product-detail-page">
         <div class="backwords-span">
-        <span><a href="index.html">Home</a> / <a href="shop.html">All Products</a> / Kids Armchair</span>
-    </div>
-    
-    <div class="product-detail-card">
-
-        <div class="product-image-section">
-
-            <img src="https://static.wixstatic.com/media/88aac0_fbb9d8700eda4dd2b25031993f16c5e0~mv2.jpg/v1/fill/w_536,h_536,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/88aac0_fbb9d8700eda4dd2b25031993f16c5e0~mv2.jpg"
-                alt="">
-            <span class="span1">A stylish and comfortable kids' armchair with rounded edges.</span>
+            <span><a href="index.html">Home</a> / <a href="shop.html">All Products</a> / Kids Armchair</span>
         </div>
 
-        <div class="product-info-section">
-            <h2>Kids Armchair</h2>
-            <span class="price" style="font-size: 20px;">$129.00</span>
-            <form class="product-options-form">
+        <div class="product-detail-card">
 
-                <label for="Size">Size *</label>
-                <select name="" id="" placeholder="Select">
-                    <option value="Small">Small</option>
-                    <option value="Medium">Medium</option>
-                </select>
+            <div class="product-image-section">
 
-                <label for="Color">Color *</label>
-                <select name="" id="" placeholder="Select">
-                    <option value="Blue">Light Blue</option>
-                    <option value="Red">Mint Green</option>
-                </select>
+                <img src="https://static.wixstatic.com/media/88aac0_fbb9d8700eda4dd2b25031993f16c5e0~mv2.jpg/v1/fill/w_536,h_536,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/88aac0_fbb9d8700eda4dd2b25031993f16c5e0~mv2.jpg"
+                    alt="">
+                <span class="span1">A stylish and comfortable kids' armchair with rounded edges.</span>
+            </div>
 
-                <label for="Quantity">Quantity *</label>
-                <input type="number" id="quantity" name="quantity" min="1" value="1">
+            <div class="product-info-section">
+                <h2>Kids Armchair</h2>
+                <span class="price" style="font-size: 20px;">$129.00</span>
+                <form class="product-options-form">
+
+                    <label for="Size">Size *</label>
+                    <select name="" id="" placeholder="Select">
+                        <option value="Small">Small</option>
+                        <option value="Medium">Medium</option>
+                    </select>
+
+                    <label for="Color">Color *</label>
+                    <select name="" id="" placeholder="Select">
+                        <option value="Blue">Light Blue</option>
+                        <option value="Red">Mint Green</option>
+                    </select>
+
+                    <label for="Quantity">Quantity *</label>
+                    <input type="number" id="quantity" name="quantity" min="1" value="1">
 
 
-                <button type="submit" class="add-to-cart">Add to Cart</button>
+                    <button type="submit" class="add-to-cart">Add to Cart</button>
 
-            </form>
-            <div class="icons-foot">
-                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-pinterest"></i></a>
-                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-                <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+                </form>
+                <div class="icons-foot">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-pinterest"></i></a>
+                    <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
 
+                </div>
             </div>
         </div>
-    </div>
     </div>
     <footer>
         <div class="left-foot">
@@ -97,11 +105,11 @@
         </div>
         <div class="right-foot">
             <ul>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Accessibility Statement</a></li>
-                <li><a href="">Shipping Policy</a></li>
-                <li><a href="">Terms & Conditions</a></li>
-                <li><a href="">Refund Policy</a></li>
+                <li><a href="Privacy&Policy.html">Privacy Policy</a></li>
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="ShippingPolicy.html">Shipping Policy</a></li>
+                <li><a href="Terms&Conditions.html">Terms & Conditions</a></li>
+                <li><a href="RefundPolicy.html">Refund Policy</a></li>
             </ul>
             <div class="address-foot">
                 <span>500 Terry Francine St.San</span>

@@ -26,6 +26,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: black 1px solid;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    transition: 0.9s;
 }
 
 nav h3 {
@@ -47,10 +51,41 @@ nav .nav-icons {
     gap: 10px;
 }
 
+.nav-icons+i {
+    display: none !important;
+}
+
+
+.mobileNav {
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    transition: 1s;
+    top: -100%;
+    list-style: none;
+    z-index: 11;
+
+}
+
+.show {
+    top: 0;
+}
+
 .aOne:hover {
     color: gray;
     transition: color 0.9s;
 }
+
+/* Tiny Wonders */
 
 section {
     background-color: #EEE8D7;
@@ -107,7 +142,7 @@ marquee {
     word-spacing: 15px;
 }
 
-
+/* banner */
 .art1 {
     max-width: 100%;
     height: 700px;
@@ -127,6 +162,7 @@ marquee {
     font-size: 25px;
 }
 
+/* პროდუქტის ქარდები */
 main {
     padding: 20px;
     gap: 20px;
@@ -150,6 +186,7 @@ main .product-card {
 .card-image-container {
     position: relative;
     overflow: hidden;
+    object-fit: contain;
 }
 
 .quick-view-btn {
@@ -187,7 +224,7 @@ main .product-card {
     font-size: 60px;
     margin-bottom: 20px;
     animation: sectionAppearSlideUp 1s;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 .our-story img {
@@ -195,15 +232,17 @@ main .product-card {
     height: 300px;
     object-fit: cover;
     animation: fadein 2s ease-in-out;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
 
 
 .our-story p {
     width: 80%;
     animation: sectionAppearSlideUp 1.5s;
-    animation-delay: 3s;
+    animation-delay: 2s;
 }
+
+/* our story ს მთლიანი დიდი დივი */
 
 .section2 {
     display: flex;
@@ -242,7 +281,7 @@ main .product-card {
     font-size: 50px;
     margin-bottom: 50px;
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
     max-width: 100%;
 }
 
@@ -253,7 +292,7 @@ main .product-card {
     text-align: center;
     margin-bottom: 50px;
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 .section3 span {
@@ -262,19 +301,19 @@ main .product-card {
     font-size: 20px;
     margin-bottom: 15px;
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 .section3 i {
     font-size: 50px;
     margin-bottom: 20px;
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 .section3 button {
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 /* Why Choose Us */
@@ -284,7 +323,7 @@ main .product-card {
     margin-bottom: -100px;
     font-size: 60px;
     animation: sectionAppearSlideUp 1.5s;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
     max-width: 100%;
 }
 
@@ -309,7 +348,7 @@ main .product-card {
 .section4 .card1 span {
     color: rgb(86, 84, 84);
     animation: sectionAppearSlideUp 1.5s;
-    animation-delay: 4s;
+    animation-delay: 1.5s;
 }
 
 .section4 .card1 img {
@@ -341,13 +380,13 @@ main .product-card {
     font-size: 60px;
     margin-bottom: 20px;
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 
 }
 
 .left p {
     animation: fadein 2s ease-in-out;
-    animation-delay: 5s;
+    animation-delay: 1.5s;
 }
 
 .left-img img {
@@ -573,6 +612,33 @@ footer {
 }
 
 
+/* Privacy & Policy */
+
+.Privacy-Policy {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    padding: 80px;
+    gap: 40px;
+    height: auto;
+    max-width: 50%;
+    margin-bottom: 50px;
+    font-family: "Playfair Display", serif;
+
+}
+
+.Privacy-Policy h1 {
+    font-size: 90px;
+    display: flex;
+
+
+}
+
+
+
+
+
 
 /* SHOP PAGE */
 
@@ -588,6 +654,7 @@ footer {
     flex-direction: column;
     font-family: "Playfair Display", serif;
     gap: 30px;
+    margin-top: 50px;
 }
 
 .shop-left ul {
@@ -632,7 +699,7 @@ footer {
     justify-content: space-between;
     padding: 80px;
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 100%;
 
 }
 
@@ -679,7 +746,7 @@ footer {
 }
 
 .product-options-form input {
-    width: 50px;
+    max-width: 50px;
     text-align: center;
     padding: 5px;
 }
@@ -702,7 +769,99 @@ footer {
     text-decoration: underline;
 }
 
+@media screen and (min-width: 800px) {
+    .mobileNav {
+        display: none;
+    }
+
+
+
+
+}
+
+
+@media screen and (max-width: 800px) {
+
+    main {
+        padding: 20px;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav ul {
+        display: none !important;
+    }
+
+    .nav-icons a:first-child {
+        display: none !important;
+    }
+
+    .nav-icons {
+        display: flex !important;
+        margin-left: auto;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .nav-icons+i {
+        display: block !important;
+    }
+
+    .product-detail-page {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .product-detail-card {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .product-image-section {
+        width: 100%;
+    }
+
+    .product-image-section img {
+        width: 100%;
+    }
+
+    .product-info-section {
+        width: 100%;
+    }
+
+    .backwords-span {
+        margin-top: 50px;
+    }
+
+
+    .Privacy-Policy {
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        padding: 60px 10px;
+        gap: 40px;
+        height: auto;
+        max-width: 100%;
+        margin-bottom: 50px;
+        font-family: "Playfair Display", serif;
+
+    }
+
+    .Privacy-Policy h1 {
+        font-size: 80px;
+    }
+
+
+
+
+}
+
+
+
 @media screen and (max-width: 700px) {
+
+
 
     .art1 {
         height: auto;
@@ -783,6 +942,7 @@ footer {
 
 
 
+
     footer {
         gap: 5px;
         flex-direction: column;
@@ -800,21 +960,56 @@ footer {
         padding: 20px;
     }
 
+    .aboutcard h1 {
+        margin-top: 50px;
+    }
+
     .product-detail-card {
         flex-direction: column;
 
     }
 
-    .shop-left h2,
+    .shop-left .span1+h2,
     .shop-left ul {
         display: none;
     }
 
+    .filter {
+
+        display: flex;
+        justify-content: end;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+
     .shop-container {
         flex-direction: column;
+
+    }
+
+    .shop-left {
+
+        margin-bottom: -90px;
+        width: 90%;
     }
 
 
 
 
+
+
+
+
+}
+
+@media screen and (max-width: 600px) {
+
+    main {
+        padding: 20px;
+        gap: 20px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

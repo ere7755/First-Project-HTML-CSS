@@ -12,8 +12,8 @@
 
 </head>
 
-<body>
-    <nav>
+<body id="body" onscroll="window.scrollY > 300 ? nav.style.top = '-100%' : nav.style.top = '0' ">
+    <nav id="nav">
         <a href="index.html">
             <h3>R.Estevez</h3>
         </a>
@@ -27,9 +27,16 @@
             <a href="" class="aOne"><i class="fa-solid fa-circle-user"></i> Log In </a>
             <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
         </div>
+        <i onclick="mobileNav.classList.toggle('show')" class="fa-solid fa-bars"></i>
 
 
     </nav>
+    <ul class="mobileNav" id="mobileNav">
+        <li><a href="index.html" class="aOne">Home</a></li>
+        <li><a href="about.html" class="aOne">About</a></li>
+        <li><a href="shop.html" class="aOne">Shop All</a></li>
+
+    </ul>
     <div class="shop-container">
         <div class="shop-left">
             <span class="span1"><a href="index.html"><button>Home</button></a> > All Products</span>
@@ -41,7 +48,7 @@
                 <li><a href="#">Shelving</a></li>
             </ul>
 
-            <h2>Filter by</h2>
+            <h2 class="filter">Filter by</h2>
             <ul>
                 <li><a href="#">Product type</a></li>
                 <li><a href="#">Price</a></li>
@@ -163,11 +170,11 @@
         </div>
         <div class="right-foot">
             <ul>
-                <li><a href="">Privacy Policy</a></li>
-                <li><a href="">Accessibility Statement</a></li>
-                <li><a href="">Shipping Policy</a></li>
-                <li><a href="">Terms & Conditions</a></li>
-                <li><a href="">Refund Policy</a></li>
+                <li><a href="Privacy&Policy.html">Privacy Policy</a></li>
+                <li><a href="accessibility.html">Accessibility Statement</a></li>
+                <li><a href="ShippingPolicy.html">Shipping Policy</a></li>
+                <li><a href="Terms&Conditions.html">Terms & Conditions</a></li>
+                <li><a href="RefundPolicy.html">Refund Policy</a></li>
             </ul>
             <div class="address-foot">
                 <span>500 Terry Francine St.San</span>
